@@ -7,7 +7,8 @@ require("plugins")
 
 
 require("options")
-require("cpp_keybinds")
+
+
 require("lualine").setup()
 require("bufferline").setup{}
 require("lspconfig").clangd.setup{}
@@ -26,3 +27,12 @@ require("nvim-tree").setup({
     dotfiles = false,
   },
 })
+
+
+-- keybinds
+vim.cmd [[autocmd BufEnter *.cpp lua require("keybinds/cpp_keybinds")]]
+vim.cmd [[autocmd BufEnter *.cc lua require("keybinds/cpp_keybinds")]]
+vim.cmd [[autocmd BufEnter *.py lua require("keybinds/py_keybinds")]]
+require("keybinds/global_keybinds")
+
+

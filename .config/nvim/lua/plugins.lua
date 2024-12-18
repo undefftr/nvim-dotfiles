@@ -73,4 +73,5 @@ require("lazy").setup({
     },
     "tpope/vim-dispatch",
     "jiangmiao/auto-pairs",
+    "skywind3000/asyncrun.vim",
 })
